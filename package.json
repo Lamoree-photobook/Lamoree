@@ -1,0 +1,10 @@
+{
+  "name": "photobook-site",
+  "version": "1.0.0",
+  "description": "Minimalist photobook landing page",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {}
+}
