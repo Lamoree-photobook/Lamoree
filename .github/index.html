@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lámoree</title>
+  <link rel="stylesheet" href="./public/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav">
+    <div class="nav__logo">
+      <!-- EDIT: Your brand/shop name -->
+      <span>Lámoree</span>
+    </div>
+    <div class="nav__links">
+      <a href="#about">About</a>
+      <a href="#previews">Preview</a>
+      <a href="#order" class="nav__cta">Buy Now</a>
+    </div>
+    <button class="nav__hamburger" aria-label="menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero__left">
+      <p class="hero__eyebrow">
+        <!-- EDIT: Edition / year / subtitle -->
+        Limited Edition · 2025
+      </p>
+      <h1 class="hero__title">
+        <!-- EDIT: Your book title (can use <br> for line breaks) -->
+        Between<br /><em>Light &amp; Shadow</em>
+      </h1>
+      <p class="hero__desc">
+        <!-- EDIT: Short description of your photobook -->
+        A quiet collection of moments captured across Southeast Asia — early mornings, slow afternoons, and the golden hour between.
+      </p>
+      <div class="hero__actions">
+        <a href="#order" class="btn btn--dark">Order Your Copy</a>
+        <a href="#previews" class="btn btn--ghost">Preview Inside</a>
+      </div>
+      <div class="hero__meta">
+        <!-- EDIT: Book specs -->
+        <span>148 pages</span>
+        <span>·</span>
+        <span>A4 Softcover</span>
+        <span>·</span>
+        <span>Full colour print</span>
+      </div>
+    </div>
+    <div class="hero__right">
+      <div class="hero__book-wrap">
+        <!-- EDIT: Replace src with your cover image path, e.g. images/cover.jpg -->
+        <div class="hero__book-cover" id="heroCover">
+          <div class="book-placeholder">
+            <p>Replace with<br/>your cover image</p>
+            <p class="hint">images/cover.jpg</p>
+          </div>
+        </div>
+        <div class="hero__book-shadow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT / STORY SECTION
+  ============================================================ -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__text">
+        <span class="section-label">The Story</span>
+        <h2>
+          <!-- EDIT: Section heading -->
+          Every frame holds a breath
+        </h2>
+        <p>
+          <!-- EDIT: Your story / artist statement (paragraph 1) -->
+          This photobook began as a personal project — a way to slow down and truly see the places I was passing through. Each image was chosen not for its drama, but for the feeling it holds.
+        </p>
+        <p>
+          <!-- EDIT: Your story / artist statement (paragraph 2) -->
+          Printed on archival matte paper with an open-flat binding, the book is designed to be held, read slowly, and returned to.
+        </p>
+      </div>
+      <div class="about__image">
+        <!-- EDIT: Replace with your image, e.g. images/about.jpg -->
+        <div class="img-placeholder">
+          <p>images/about.jpg</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PHOTO PREVIEWS / GALLERY
+  ============================================================ -->
+  <section class="previews" id="previews">
+    <div class="previews__header">
+      <span class="section-label">Inside the Book</span>
+      <h2>
+        <!-- EDIT: Preview section heading -->
+        A glimpse within
+      </h2>
+    </div>
+    <div class="previews__grid">
+      <!-- EDIT: Add/remove preview images. Replace the placeholder divs with:
+           <img src="images/preview1.jpg" alt="Preview 1" /> etc. -->
+      <div class="preview-item preview-item--tall">
+        <div class="img-placeholder"><p>images/preview1.jpg</p></div>
+      </div>
+      <div class="preview-item">
+        <div class="img-placeholder"><p>images/preview2.jpg</p></div>
+      </div>
+      <div class="preview-item">
+        <div class="img-placeholder"><p>images/preview3.jpg</p></div>
+      </div>
+      <div class="preview-item preview-item--wide">
+        <div class="img-placeholder"><p>images/preview4.jpg</p></div>
+      </div>
+      <div class="preview-item">
+        <div class="img-placeholder"><p>images/preview5.jpg</p></div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" id="lightboxClose">✕</button>
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRODUCT / PRICING
+  ============================================================ -->
+  <section class="product" id="product">
+    <div class="product__inner">
+      <span class="section-label">The Edition</span>
+      <h2>
+        <!-- EDIT: Product section heading -->
+        Choose your copy
+      </h2>
+
+      <div class="product__cards">
+
+        <!-- OPTION 1 -->
+        <div class="product__card" data-product="Standard Edition" data-price="RM 85">
+          <div class="product__card-img">
+            <!-- EDIT: Product image -->
+            <div class="img-placeholder small"><p>images/standard.jpg</p></div>
+          </div>
+          <div class="product__card-body">
+            <h3>Standard Edition</h3>
+            <p>
+              <!-- EDIT: Product description -->
+              A4 softcover, 148 pages, archival matte print. Ships within 7 working days.
+            </p>
+            <div class="product__price">
+              <!-- EDIT: Price -->
+              RM 85
+            </div>
+            <button class="btn btn--dark" onclick="addToCart('Standard Edition', 'RM 85')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- OPTION 2 -->
+        <div class="product__card product__card--featured" data-product="Signed Edition" data-price="RM 120">
+          <div class="product__badge">Most Popular</div>
+          <div class="product__card-img">
+            <!-- EDIT: Product image -->
+            <div class="img-placeholder small"><p>images/signed.jpg</p></div>
+          </div>
+          <div class="product__card-body">
+            <h3>Signed Edition</h3>
+            <p>
+              <!-- EDIT: Product description -->
+              Everything in Standard, plus a hand-signed title page and a printed thank-you card.
+            </p>
+            <div class="product__price">
+              <!-- EDIT: Price -->
+              RM 120
+            </div>
+            <button class="btn btn--dark" onclick="addToCart('Signed Edition', 'RM 120')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- OPTION 3 — remove this card if not needed -->
+        <div class="product__card" data-product="Bundle (2 copies)" data-price="RM 160">
+          <div class="product__card-img">
+            <!-- EDIT: Product image -->
+            <div class="img-placeholder small"><p>images/bundle.jpg</p></div>
+          </div>
+          <div class="product__card-body">
+            <h3>Bundle (2 copies)</h3>
+            <p>
+              <!-- EDIT: Product description -->
+              Two Standard Editions — perfect as a gift. Free postage within Malaysia.
+            </p>
+            <div class="product__price">
+              <!-- EDIT: Price -->
+              RM 160
+            </div>
+            <button class="btn btn--dark" onclick="addToCart('Bundle (2 copies)', 'RM 160')">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CART DRAWER
+  ============================================================ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cartDrawer">
+    <div class="cart__header">
+      <h3>Your Cart</h3>
+      <button class="cart__close" id="cartClose">✕</button>
+    </div>
+    <div class="cart__items" id="cartItems">
+      <p class="cart__empty">Your cart is empty.</p>
+    </div>
+    <div class="cart__footer" id="cartFooter" style="display:none">
+      <div class="cart__total">
+        Total: <strong id="cartTotal">RM 0</strong>
+      </div>
+      <a href="#order" class="btn btn--dark" id="cartCheckout" onclick="closeCart()">Proceed to Order →</a>
+    </div>
+  </aside>
+
+  <!-- Floating cart button -->
+  <button class="cart-fab" id="cartFab" onclick="openCart()" style="display:none">
+    🛒 <span class="cart-fab__count" id="cartCount">0</span>
+  </button>
+
+  <!-- ============================================================
+       ORDER FORM
+  ============================================================ -->
+  <section class="order" id="order">
+    <div class="order__inner">
+      <span class="section-label">Place Your Order</span>
+      <h2>
+        <!-- EDIT: Form heading -->
+        Ready to order?
+      </h2>
+      <p class="order__sub">
+        <!-- EDIT: Sub text under form heading -->
+        Fill in your details below and we'll confirm your order via WhatsApp or Telegram.
+      </p>
+
+      <div class="order__form-wrap">
+        <div class="order__form" id="orderForm">
+
+          <!-- Cart Summary inside form -->
+          <div class="form__cart-summary" id="formCartSummary">
+            <h4>Order Summary</h4>
+            <div id="formCartItems"><p style="color:#aaa;font-size:.85rem">No items yet — add from above.</p></div>
+            <div class="form__cart-total" id="formCartTotal" style="display:none">
+              Total: <strong id="formTotalAmt"></strong>
+            </div>
+          </div>
+
+          <!-- Personal Details -->
+          <div class="form__group">
+            <label for="fname">Full Name *</label>
+            <input type="text" id="fname" placeholder="e.g. Amirah Binti Zainal" required />
+          </div>
+
+          <div class="form__group">
+            <label for="fphone">Phone Number *</label>
+            <input type="tel" id="fphone" placeholder="e.g. 0123456789" required />
+          </div>
+
+          <div class="form__group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" placeholder="e.g. you@email.com" />
+          </div>
+
+          <div class="form__group">
+            <label for="faddress">Delivery Address *</label>
+            <textarea id="faddress" rows="3" placeholder="Street, City, Postcode, State" required></textarea>
+          </div>
+
+          <div class="form__group">
+            <label for="fnotes">Notes / Special Requests</label>
+            <textarea id="fnotes" rows="2" placeholder="e.g. Please include a gift message: ..."></textarea>
+          </div>
+
+          <!-- Contact method choice -->
+          <div class="form__group">
+            <label>Send order via *</label>
+            <div class="form__radio-row">
+              <label class="radio-btn" id="radioWA">
+                <input type="radio" name="contact" value="whatsapp" checked />
+                <span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 11.998c0 1.765.463 3.424 1.276 4.858L2 22l5.293-1.261A9.938 9.938 0 0011.998 22C17.519 22 22 17.519 22 11.998 22 6.477 17.519 2 11.998 2zm0 18.135a8.085 8.085 0 01-4.186-1.164l-.3-.179-3.134.748.782-3.047-.196-.314a8.098 8.098 0 01-1.229-4.179c0-4.482 3.646-8.128 8.133-8.128 4.482 0 8.127 3.646 8.127 8.128 0 4.482-3.645 8.135-8.127 8.135z"/></svg>
+                  WhatsApp
+                </span>
+              </label>
+              <label class="radio-btn" id="radioTG">
+                <input type="radio" name="contact" value="telegram" />
+                <span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.847l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.958.712z"/></svg>
+                  Telegram
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn--dark btn--full" onclick="submitOrder()">
+            Send My Order →
+          </button>
+
+          <p class="form__note">
+            <!-- EDIT: Note below submit button -->
+            ⚡ You'll be redirected to WhatsApp or Telegram to confirm & pay. Orders are processed within 1–2 working days.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ SECTION
+  ============================================================ -->
+  <section class="faq">
+    <div class="faq__inner">
+      <span class="section-label">Questions</span>
+      <h2>FAQs</h2>
+      <div class="faq__list">
+
+        <!-- EDIT: Add/remove FAQ items as needed -->
+        <details class="faq__item">
+          <summary>How long does shipping take?</summary>
+          <p>
+            <!-- EDIT -->
+            Standard delivery within Malaysia takes 5–7 working days. International orders typically take 14–21 days.
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary>How do I pay?</summary>
+          <p>
+            <!-- EDIT -->
+            Payment is via DuitNow QR, Bank Transfer, or online banking. Details will be shared with you on WhatsApp / Telegram after you submit your order.
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Can I order outside Malaysia?</summary>
+          <p>
+            <!-- EDIT -->
+            Yes! International orders are welcome. Please note that shipping fees vary by country and will be calculated at checkout.
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Is the book available in stores?</summary>
+          <p>
+            <!-- EDIT -->
+            This is an independent, self-published edition available exclusively through this website.
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Can I return or exchange my order?</summary>
+          <p>
+            <!-- EDIT -->
+            Due to the nature of printed goods, we do not accept returns. However, if your book arrives damaged, please contact us within 48 hours with photos and we'll make it right.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <!-- EDIT: Brand name & tagline -->
+        <span class="footer__logo">wayaki</span>
+        <p>Photography &amp; printed matter</p>
+      </div>
+      <div class="footer__links">
+        <!-- EDIT: Social links -->
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+        <!-- EDIT: WhatsApp number (replace 60123456789) -->
+        <a href="https://wa.me/60123456789" target="_blank">WhatsApp</a>
+      </div>
+      <p class="footer__copy">
+        <!-- EDIT: Year & name -->
+        © 2025 Wayaki. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
