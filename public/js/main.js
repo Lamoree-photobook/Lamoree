@@ -150,9 +150,7 @@ Hello! I would like to place an order 📖
 
 *Order Details:*
 ${orderLines}
-
 *Total: ${total}*
-
 ---
 *Customer Information:*
 Name: ${name}
