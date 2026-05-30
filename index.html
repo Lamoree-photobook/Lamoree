@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lámoree</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./public/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
 
   <!-- ============================================================
@@ -43,7 +47,8 @@
       </h1>
       <p class="hero__desc">
         <!-- EDIT: Short description of your photobook -->
-        A quiet collection of moments captured across Southeast Asia — early mornings, slow afternoons, and the golden hour between.
+        A quiet collection of moments captured across Southeast Asia — early mornings, slow afternoons, and the golden
+        hour between.
       </p>
       <div class="hero__actions">
         <a href="#order" class="btn btn--dark">Order Your Copy</a>
@@ -63,7 +68,7 @@
         <!-- EDIT: Replace src with your cover image path, e.g. images/cover.jpg -->
         <div class="hero__book-cover" id="heroCover">
           <div class="book-placeholder">
-            <img src="images/cover.png" alt="Hero Image">
+            <img src="./public/images/cover.png" alt="Hero Image">
           </div>
         </div>
         <div class="hero__book-shadow"></div>
@@ -84,15 +89,17 @@
         </h2>
         <p>
           <!-- EDIT: Your story / artist statement (paragraph 1) -->
-          This photobook began as a personal project — a way to slow down and truly see the places I was passing through. Each image was chosen not for its drama, but for the feeling it holds.
+          This photobook began as a personal project — a way to slow down and truly see the places I was passing
+          through. Each image was chosen not for its drama, but for the feeling it holds.
         </p>
         <p>
           <!-- EDIT: Your story / artist statement (paragraph 2) -->
-          Printed on archival matte paper with an open-flat binding, the book is designed to be held, read slowly, and returned to.
+          Printed on archival matte paper with an open-flat binding, the book is designed to be held, read slowly, and
+          returned to.
         </p>
       </div>
       <div class="about__image">
-        <img src="images/page.png">
+        <img src="./public/images/page.png">
         <div class="img-placeholder">
           <p>images/about.jpg</p>
         </div>
@@ -111,20 +118,20 @@
         A glimpse within
       </h2>
     </div>
-      <div class="previews__grid">
-        <div class="preview-item">
-            <img src="images/page1.png">
-        </div>
-        <div class="preview-item">
-            <img src="images/page2.png">
-        </div>
-        <div class="preview-item">
-            <img src="images/page3.png">
-        </div>
-        <div class="preview-item">
-            <img src="images/page4.png">
-        </div>
+    <div class="previews__grid">
+      <div class="preview-item">
+        <img src="./public/images/page1.png">
       </div>
+      <div class="preview-item">
+        <img src="./public/images/page2.png">
+      </div>
+      <div class="preview-item">
+        <img src="./public/images/page3.png">
+      </div>
+      <div class="preview-item">
+        <img src="./public/images/page4.png">
+      </div>
+    </div>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
       <button class="lightbox__close" id="lightboxClose">✕</button>
@@ -146,63 +153,71 @@
       <div class="product__cards">
 
         <!-- OPTION 1 -->
-        <div class="product__card" data-product="Standard Edition" data-price="RM 85">
+        <div class="product__card" data-product="Standard Edition" data-price="RM 39.90">
           <div class="product__card-img">
             <!-- EDIT: Product image -->
-            <div class="img-placeholder small"><p>images/standard.jpg</p></div>
+            <div class="img-placeholder small">
+              <p>images/standard.jpg</p>
+            </div>
           </div>
           <div class="product__card-body">
             <h3>Standard Edition</h3>
             <p>
               <!-- EDIT: Product description -->
-              A4 softcover, 148 pages, archival matte print. Ships within 7 working days.
+              A4 hardcover photobook, canva photobook template, 24 glossy inner pages, inclusive of track shipping.
             </p>
             <div class="product__price">
               <!-- EDIT: Price -->
-              RM 85
+              SGD 39.90
             </div>
-            <button class="btn btn--dark" onclick="addToCart('Standard Edition', 'RM 85')">Add to Cart</button>
+            <button class="btn btn--dark" onclick="addToCart('Standard Edition', 'SGD 39.90')">Add to Cart</button>
           </div>
         </div>
 
         <!-- OPTION 2 -->
-        <div class="product__card product__card--featured" data-product="Signed Edition" data-price="RM 120">
+        <div class="product__card product__card--featured" data-product="Signed Edition" data-price="SGD 49.90">
           <div class="product__badge">Most Popular</div>
           <div class="product__card-img">
             <!-- EDIT: Product image -->
-            <div class="img-placeholder small"><p>images/signed.jpg</p></div>
+            <div class="img-placeholder small">
+              <p>images/signed.jpg</p>
+            </div>
           </div>
           <div class="product__card-body">
             <h3>Signed Edition</h3>
             <p>
               <!-- EDIT: Product description -->
-              Everything in Standard, plus a hand-signed title page and a printed thank-you card.
+            <p>
+              Premium A4 hardcover photobook with thicker inner pages and a soft-touch finish.
+            </p>
             </p>
             <div class="product__price">
               <!-- EDIT: Price -->
-              RM 120
+              SGD 49.90
             </div>
-            <button class="btn btn--dark" onclick="addToCart('Signed Edition', 'RM 120')">Add to Cart</button>
+            <button class="btn btn--dark" onclick="addToCart('Signed Edition', 'SGD 49.90')">Add to Cart</button>
           </div>
         </div>
 
         <!-- OPTION 3 — remove this card if not needed -->
-        <div class="product__card" data-product="Bundle (2 copies)" data-price="RM 160">
+        <div class="product__card" data-product="Bundle (2 copies)" data-price="SGD 69.90">
           <div class="product__card-img">
             <!-- EDIT: Product image -->
-            <div class="img-placeholder small"><p>images/bundle.jpg</p></div>
+            <div class="img-placeholder small">
+              <p>images/bundle.jpg</p>
+            </div>
           </div>
           <div class="product__card-body">
             <h3>Bundle (2 copies)</h3>
             <p>
               <!-- EDIT: Product description -->
-              Two Standard Editions — perfect as a gift. Free postage within Malaysia.
+              Two A4 hardcover photobooks — one for you and your partner, creating a keepsake you'll both cherish.
             </p>
             <div class="product__price">
               <!-- EDIT: Price -->
-              RM 160
+              SGD 69.90
             </div>
-            <button class="btn btn--dark" onclick="addToCart('Bundle (2 copies)', 'RM 160')">Add to Cart</button>
+            <button class="btn btn--dark" onclick="addToCart('Bundle (2 copies)', 'SGD 69.90')">Add to Cart</button>
           </div>
         </div>
 
@@ -256,7 +271,9 @@
           <!-- Cart Summary inside form -->
           <div class="form__cart-summary" id="formCartSummary">
             <h4>Order Summary</h4>
-            <div id="formCartItems"><p style="color:#aaa;font-size:.85rem">No items yet — add from above.</p></div>
+            <div id="formCartItems">
+              <p style="color:#aaa;font-size:.85rem">No items yet — add from above.</p>
+            </div>
             <div class="form__cart-total" id="formCartTotal" style="display:none">
               Total: <strong id="formTotalAmt"></strong>
             </div>
@@ -265,12 +282,12 @@
           <!-- Personal Details -->
           <div class="form__group">
             <label for="fname">Full Name *</label>
-            <input type="text" id="fname" placeholder="e.g. Amirah Binti Zainal" required />
+            <input type="text" id="fname" placeholder="e.g. jane" required />
           </div>
 
           <div class="form__group">
             <label for="fphone">Phone Number *</label>
-            <input type="tel" id="fphone" placeholder="e.g. 0123456789" required />
+            <input type="tel" id="fphone" placeholder="" required />
           </div>
 
           <div class="form__group">
@@ -280,12 +297,12 @@
 
           <div class="form__group">
             <label for="faddress">Delivery Address *</label>
-            <textarea id="faddress" rows="3" placeholder="Street, City, Postcode, State" required></textarea>
+            <textarea id="faddress" rows="3" placeholder="Street, City, Postcode" required></textarea>
           </div>
 
           <div class="form__group">
             <label for="fnotes">Notes / Special Requests</label>
-            <textarea id="fnotes" rows="2" placeholder="e.g. Please include a gift message: ..."></textarea>
+            <textarea id="fnotes" rows="2" placeholder="e.g. Any special requests / notes"></textarea>
           </div>
 
           <!-- Contact method choice -->
@@ -295,14 +312,22 @@
               <label class="radio-btn" id="radioWA">
                 <input type="radio" name="contact" value="whatsapp" checked />
                 <span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 11.998c0 1.765.463 3.424 1.276 4.858L2 22l5.293-1.261A9.938 9.938 0 0011.998 22C17.519 22 22 17.519 22 11.998 22 6.477 17.519 2 11.998 2zm0 18.135a8.085 8.085 0 01-4.186-1.164l-.3-.179-3.134.748.782-3.047-.196-.314a8.098 8.098 0 01-1.229-4.179c0-4.482 3.646-8.128 8.133-8.128 4.482 0 8.127 3.646 8.127 8.128 0 4.482-3.645 8.135-8.127 8.135z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path
+                      d="M11.998 2C6.477 2 2 6.477 2 11.998c0 1.765.463 3.424 1.276 4.858L2 22l5.293-1.261A9.938 9.938 0 0011.998 22C17.519 22 22 17.519 22 11.998 22 6.477 17.519 2 11.998 2zm0 18.135a8.085 8.085 0 01-4.186-1.164l-.3-.179-3.134.748.782-3.047-.196-.314a8.098 8.098 0 01-1.229-4.179c0-4.482 3.646-8.128 8.133-8.128 4.482 0 8.127 3.646 8.127 8.128 0 4.482-3.645 8.135-8.127 8.135z" />
+                  </svg>
                   WhatsApp
                 </span>
               </label>
               <label class="radio-btn" id="radioTG">
                 <input type="radio" name="contact" value="telegram" />
                 <span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.847l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.958.712z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.847l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.958.712z" />
+                  </svg>
                   Telegram
                 </span>
               </label>
@@ -315,7 +340,8 @@
 
           <p class="form__note">
             <!-- EDIT: Note below submit button -->
-            ⚡ You'll be redirected to WhatsApp or Telegram to confirm & pay. Orders are processed within 1–2 working days.
+            ⚡ You'll be redirected to WhatsApp or Telegram to confirm & pay. Orders are processed within 1–2 working
+            days.
           </p>
 
         </div>
@@ -337,7 +363,8 @@
           <summary>How long does shipping take?</summary>
           <p>
             <!-- EDIT -->
-            Standard delivery within Malaysia takes 5–7 working days. International orders typically take 14–21 days.
+            Once your photobook design has been confirmed, your order will be carefully printed, bound and delivered
+            within approximately 14 working days across Singapore.
           </p>
         </details>
 
@@ -345,31 +372,39 @@
           <summary>How do I pay?</summary>
           <p>
             <!-- EDIT -->
-            Payment is via DuitNow QR, Bank Transfer, or online banking. Details will be shared with you on WhatsApp / Telegram after you submit your order.
+            Payment is via Paynow, Bank Transfer or Paylah. Details will be shared with you on WhatsApp /
+            Telegram after you submit your order.
           </p>
         </details>
 
         <details class="faq__item">
-          <summary>Can I order outside Malaysia?</summary>
+          <summary>Can I order outside Singapore?</summary>
           <p>
             <!-- EDIT -->
-            Yes! International orders are welcome. Please note that shipping fees vary by country and will be calculated at checkout.
+            Currently, physical photobooks are available for delivery within Singapore only. For international
+            customers, our digital photobook templates remain available so you can create and preserve your memories
+            wherever you are.
           </p>
         </details>
 
         <details class="faq__item">
-          <summary>Is the book available in stores?</summary>
+          <summary>Can I change my design after confirmation?</summary>
           <p>
             <!-- EDIT -->
-            This is an independent, self-published edition available exclusively through this website.
+            Once your design has been confirmed, your photobook will proceed to production and changes can no longer be
+            made. Please review your design carefully before final approval.
           </p>
+        </details>
+        </p>
         </details>
 
         <details class="faq__item">
-          <summary>Can I return or exchange my order?</summary>
+          <summary>Can I request a refund after placing an order?</summary>
           <p>
             <!-- EDIT -->
-            Due to the nature of printed goods, we do not accept returns. However, if your book arrives damaged, please contact us within 48 hours with photos and we'll make it right.
+            As each photobook is custom-made and personalized, we are unable to offer refunds once payment has been made
+            and production has begun. If your order arrives damaged or there is a printing issue, please contact us
+            within 48 hours of receiving your order with photos, and we will work with you to resolve the issue.
           </p>
         </details>
 
@@ -385,14 +420,14 @@
       <div class="footer__brand">
         <!-- EDIT: Brand name & tagline -->
         <span class="footer__logo">Lámoree</span>
-        <p>Photography &amp; printed matter</p>
+        <p>Made to hold the moments you never want to forget</p>
       </div>
       <div class="footer__links">
         <!-- EDIT: Social links -->
-        <a href="https://instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/lamoreephotobook/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@lamoree_photobooks" target="_blank">TikTok</a>
         <!-- EDIT: WhatsApp number (replace 60123456789) -->
-        <a href="https://wa.me/60123456789" target="_blank">WhatsApp</a>
+        <a href="https://wa.me/6598623687" target="_blank">WhatsApp</a>
       </div>
       <p class="footer__copy">
         <!-- EDIT: Year & name -->
@@ -401,6 +436,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="./public/js/main.js"></script>
 </body>
+
 </html>
