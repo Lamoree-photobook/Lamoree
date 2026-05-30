@@ -6,7 +6,7 @@ const CONFIG = {
   whatsappNumber: "6598623687",
 
   // EDIT: Your Telegram username (without @) OR a t.me link
-  telegramUsername: "@lamoree_photobook",
+  telegramUsername: "lamoree_photobook",
 
   // EDIT: Your currency symbol (used in messages)
   currency: "SGD",
